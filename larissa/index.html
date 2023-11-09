@@ -57,6 +57,7 @@ swiper-bundle.min.css"/>
             <section class="carrossel">
                <h2 class="carrossel__titulo">Novos lançamentos</h2>
                <div class="swiper">
+                  <div class="swiper-pagination"></div>
                   <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                   <!-- Slides -->
@@ -100,17 +101,30 @@ swiper-bundle.min.css"/>
                   <!-- If we need navigation buttons -->
                   <div class="swiper-button-prev"></div>
                   <div class="swiper-button-next"></div>
-                  <!-- If we need scrollbar -->
-                  <div class="swiper-scrollbar"></div>
+              
+                  </div>
+                  <div class="card">
+                     <div class="card__descricao">
+                        <div class="descricao">
+                            <h3 class="descricao_titulo">talvez voce tambem se interesse por...</h3>
+                            <h2 class="descricao_titulo-livro">Angular 11 e firebase</h2>
+                            <p class="descricao_texto">construindo uma apl</p>
+                        </div>
+                     </div>
                   </div>
                </section>
                <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
                <script>
                   const swiper = new swiper('.swiper',{
-                     seed: 400,
-                     spaceBetween: 100,
+                     spaceBetween: 10,
+                     slidesPerView: 3,
+                     pagination:{
+                        el: '.swiper-pagination',
+                        type:'bullets',
+                     },
                   
                   })
-               </script>
+
+                </script>
                </body>
          </html>
